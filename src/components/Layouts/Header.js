@@ -1,10 +1,8 @@
-import Navigation from "./Navigation";
 import HeaderHero from "./HeaderHero";
 
 const Header = () => {
   return (
-    <header>
-      <Navigation />
+    <header className="mb-6">
       <HeaderHero />
     </header>
   );

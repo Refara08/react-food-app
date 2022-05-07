@@ -8,6 +8,14 @@ body {
   @apply font-poppins;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 /* utility */
 .badge {
   @apply absolute top-0 right-0 -mt-2 -mr-2 bg-red-600 rounded-full w-[15px] aspect-square text-white text-center text-xs;
@@ -18,11 +26,11 @@ body {
 }
 
 .button.dark {
-  @apply bg-black text-white;
+  @apply bg-black text-white hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 ease-linear;
 }
 
 .button.light {
-  @apply bg-white text-black border-2 border-black;
+  @apply bg-white text-black border-2 border-black hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 ease-linear;
 }
 
 .img-hero {
@@ -67,4 +75,12 @@ body {
 
 .hamburger.deactive span:nth-child(3) {
   @apply animate-burger3-deactivate;
+}
+
+.chevron-left:hover > div {
+  @apply -translate-x-1;
+}
+
+.chevron-right:hover > div {
+  @apply translate-x-1;
 }

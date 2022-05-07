@@ -1,0 +1,39 @@
+.slide {
+  width: 100vw;
+  /* height: 10vh; */
+}
+
+.one {
+  /* width: 200vw;
+  background-image: url("https://images.unsplash.com/photo-1601274016113-72b786d7d16e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZGVlcnx8fHx8fDE2NTE4ODI5Njg&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080");
+  background-size: auto 50vh;
+  background-repeat: repeat-x; */
+}
+
+.wrapper {
+  /* border: 3px solid red; */
+  /* width: 200vw; */
+  transform: rotate(90deg) translateY(-50vh);
+  transform-origin: top left;
+}
+
+.wrapper-outer {
+  /* border: 3px solid blue; */
+  /* display: flex; */
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: absolute;
+  width: 60vh;
+  height: 164.5vh;
+  transform: rotate(-90deg) translateX(-30vw);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.side-scroller {
+  /* border: 3px solid blue; */
+  position: relative;
+  height: 60vh;
+}

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import CartIcon from "../svg-icons/CartIcon";
 import AccountIcon from "../svg-icons/AccountIcon";
 
@@ -20,9 +20,9 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="p-8 shadow-md sticky top-0">
+    <nav className="p-8 shadow-md sticky top-0 bg-white">
       <div className="container mx-auto flex flex-row justify-between items-center">
-        <h1 className="text-2xl font-bold font-inter mr-8">React Meals</h1>
+        <h1 className="text-2xl font-bold font-inter mr-8">Ma Meals</h1>
         <div className="hidden links lg:flex justify-evenly items-center">
           <a className={`${linkStyle} ${linkHover}`} href="/">
             Home
@@ -51,7 +51,7 @@ const Navigation = () => {
           </div>
         </div>
         <div
-          className="w-[30px] h-[30px] grid place-items-center"
+          className="w-[30px] h-[30px] grid lg:hidden place-items-center"
           onClick={hamburgerHandler}
         >
           <div
