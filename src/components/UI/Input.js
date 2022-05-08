@@ -8,7 +8,7 @@ const Input = (props) => {
   };
 
   return (
-    <div className="flex flex-row justify-start items-end gap-2">
+    <div className="flex flex-row max-w-fit items-end gap-2">
       <label htmlFor={props.input.id}>{props.label}</label>
       <button
         type="button"

@@ -26,6 +26,10 @@ module.exports = {
           "50%": { transform: "translateY(-100%)" },
           "100%": { transform: "translateY(-100%) rotate(135deg)" },
         },
+        "slide-down": {
+          "0%": { opacity: 0, transform: "translateY(-3rem)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
       },
       animation: {
         "burger1-activate": "burger1-activate 1s forwards ease-out",
@@ -34,6 +38,7 @@ module.exports = {
         "burger1-deactivate": "burger1-activate 1s reverse forwards ease-out",
         "burger2-deactivate": "burger2-activate 1s reverse forwards ease-out",
         "burger3-deactivate": "burger3-activate 1s reverse forwards ease-out",
+        "slide-down": "slide-down 300ms ease-out forwards",
       },
     },
   },
