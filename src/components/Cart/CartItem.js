@@ -1,18 +1,24 @@
+import { useContext } from "react";
 import { useState } from "react";
+
 import Input from "../UI/Input";
+import CartContext from "../../store/cart-context";
 
 const CartItem = (props) => {
+  const cartCtx = useContext(CartContext);
   const [inputNumVal, setInputNumVal] = useState(props.amount);
 
   const lowerTheNumHandler = () => {
     setInputNumVal((prev) => {
       return prev - 1;
     });
+    cartCtx.removeItem(props.id);
   };
   const RiseTheNumHandler = () => {
     setInputNumVal((prev) => {
       return prev + 1;
     });
+    cartCtx.addItem({ ...props.item, amount: 1 });
   };
   const changeNumValHandler = (enteredVal) => {
     setInputNumVal(parseInt(enteredVal));

@@ -1,7 +1,21 @@
+import { useContext } from "react";
+
 import Card from "../UI/Card";
 import MealsItemForm from "./MealsItemForm";
+import CartContext from "../../store/cart-context";
 
 const MealItem = (props) => {
+  const cartCtx = useContext(CartContext);
+
+  const addItemToCartHandler = (amount) => {
+    cartCtx.addItem({
+      id: props.id,
+      name: props.name,
+      amount: amount,
+      price: props.price,
+    });
+  };
+
   return (
     <Card>
       <div className="flex flex-col">
@@ -17,8 +31,11 @@ const MealItem = (props) => {
             )}`}</span>
           </div>
         </div>
-        <div className="h-36 p-5">
-          <MealsItemForm name={props.name} />
+        <div className="h-32 px-5">
+          <MealsItemForm
+            onGetAmountItem={addItemToCartHandler}
+            name={props.name}
+          />
         </div>
       </div>
     </Card>

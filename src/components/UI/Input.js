@@ -1,4 +1,6 @@
-const Input = (props) => {
+import React from "react";
+
+const Input = React.forwardRef((props, ref) => {
   const inputVal = parseInt(props.value);
 
   const onChangeHandler = (e) => {
@@ -12,13 +14,14 @@ const Input = (props) => {
       <label htmlFor={props.input.id}>{props.label}</label>
       <button
         type="button"
-        className={inputVal <= 0 ? "cursor-not-allowed" : "cursor-default"}
+        className={inputVal <= 0 ? "cursor-not-allowed" : "cursor-pointer"}
         disabled={inputVal <= 0 ? true : false}
         onClick={props.onLower}
       >
         -
       </button>
       <input
+        ref={ref}
         className="border-b-2 border-neutral-800 w-[3ch] text-center"
         onChange={onChangeHandler}
         value={props.value}
@@ -26,7 +29,7 @@ const Input = (props) => {
       />
       <button
         type="button"
-        className={inputVal > 100 ? "cursor-not-allowed" : "cursor-default"}
+        className={inputVal > 100 ? "cursor-not-allowed" : "cursor-pointer"}
         disabled={inputVal > 100 ? true : false}
         onClick={props.onRise}
       >
@@ -34,6 +37,6 @@ const Input = (props) => {
       </button>
     </div>
   );
-};
+});
 
 export default Input;

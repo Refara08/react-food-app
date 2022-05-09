@@ -10,8 +10,8 @@ const iconHover = "hover:scale-110 transition-all duration-300 ease-linear";
 
 const Navigation = (props) => {
   const cartCtx = useContext(CartContext);
-  const cartBadgeNum = cartCtx.items.reduce((prev, curr) => {
-    return prev + curr;
+  const cartBadgeNum = cartCtx.items.reduce((currNum, item) => {
+    return currNum + item.amount;
   }, 0);
   const [isBurgerActive, setIsBurgerActive] = useState(false);
 

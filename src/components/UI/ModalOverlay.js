@@ -12,7 +12,7 @@ const Backdrop = (props) => {
 
 const Overlay = (props) => {
   return (
-    <div className="z-40 fixed top-40 left-1/3 w-[600px] h-[1000px] animate-slide-down">
+    <div className="z-40 fixed top-40 left-1/3 w-[600px] max-h-[680px] animate-slide-down">
       <Card>{props.children}</Card>
     </div>
   );

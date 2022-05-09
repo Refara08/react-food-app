@@ -18,7 +18,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* utility */
 .badge {
-  @apply absolute top-0 right-0 -mt-2 -mr-2 bg-red-600 rounded-full w-[15px] aspect-square text-white text-center text-xs;
+  @apply absolute top-0 right-0 -mt-2 -mr-3 bg-red-600 rounded-full w-[20px] aspect-square text-white grid place-items-center text-xs;
 }
 
 .button {

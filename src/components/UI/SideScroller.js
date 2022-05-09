@@ -1,7 +1,6 @@
 import classes from "./SideScroller.module.css";
 
 const SideScroller = (props) => {
-  console.log(props.width);
   const widthSet = {
     width: props.width,
   };
